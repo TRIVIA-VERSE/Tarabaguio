@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Baguio - Booking</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <img src="Source/logo.png" alt="Baguio Logo" /><span>TARABAGUIO</span></div>
+      <nav class="nav-links">
+        <ul>
+          <li><a href="index.html">Overview</a></li>
+          <li><a href="attractions.html">Attractions</a></li>
+          <li><a href="culture.html">Culture</a></li>
+          <li><a href="food.html">Food</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="booking.html">Booking</a></li>
+          <li><a href="login.html">Admin</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle">&#9776;</button>
+    </div>
+  </header>
+
+  <main class="reveal">
+    <h2>Book Your Trip</h2>
+    <div class="booking-card">
+<form id="booking-form">
+  <input type="text" name="fullname" placeholder="Full Name" required />
+  <input type="email" name="email" placeholder="Email Address" required />
+  <input type="tel" name="contact" placeholder="Contact Number" required />
+  <input type="number" name="guests" placeholder="Number of Guests" min="1" required />
+  <input type="date" name="date" required />
+
+<select id="selectedPackage" name="package" required>
+  <option value="">Select Package</option>
+  <option value="basic" data-price="1500" data-description="Visit Burnham Park, Mines View, and The Mansion in a half-day guided tour.">Basic Tour</option>
+  <option value="premium" data-price="3000" data-description="Full-day tour with private transport, a local guide, meals, and hidden spots.">Premium Experience</option>
+  <option value="family" data-price="5000" data-description="City tour, kids' activities, picnic at Botanical Garden, and family photo.">Family Package</option>
+  <option value="cultural" data-price="4200" data-description="Explore BenCab Museum, Tam-Awan Village, and enjoy local cuisine tasting.">Cultural Escape</option>
+  <option value="nature" data-price="6000" data-description="Nature walk, eco-lodge stay, and a relaxing campfire night under the stars.">Nature Retreat</option>
+</select>
+
+  <p id="priceDisplay">Price: ₱0</p>
+  <p id="packageDescription">Please select a package to see what's included.</p>
+
+  <textarea name="notes" placeholder="Special Requests or Notes"></textarea>
+
+  <button class="btn" type="submit">Submit Booking</button>
+</form>
+      <p id="booking-msg"></p>
+    </div>
+  </main>
+
+   <footer>
+  <p>© 2025 Baguio Travel Guide | iLS Project</p>
+  <p>Contact Us | 09755949811</p>
+</footer>
+
+  <div id="thankyou-popup" class="popup-overlay hidden">
+  <div class="popup-card">
+    <h2>Thank You!</h2>
+    <p>Your booking has been submitted successfully.</p>
+    <button id="close-popup">Close</button>
+  </div>
+</div>
+
+ 
+
+  <script src="main.js"></script>
+</body>
+</html>

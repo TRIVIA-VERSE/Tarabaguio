@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Baguio - Reviews</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+          <img src="Source/logo.png" alt="Baguio Logo" />
+        <span>TARABAGUIO</span>
+      </div>
+      <nav class="nav-links">
+        <ul>
+          <li><a href="index.html">Overview</a></li>
+          <li><a href="attractions.html">Attractions</a></li>
+          <li><a href="culture.html">Culture</a></li>
+          <li><a href="food.html">Food</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="booking.html">Booking</a></li>
+          <li><a href="login.html">Admin</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle">&#9776;</button>
+    </div>
+  </header>
+
+  <main class="reveal">
+    <h2>Visitor Reviews</h2>
+
+    <section class="reviews" id="userReviews">
+      <div class="review">
+        <p class="stars">★★★★★</p>
+        <blockquote>“A beautiful mountain escape — peaceful and cool.”</blockquote>
+        <p>– Lara, Manila</p>
+      </div>
+      <div class="review">
+        <p class="stars">★★★★☆</p>
+        <blockquote>“Horseback riding and fresh strawberries were the best!”</blockquote>
+        <p>– Paolo, Cebu</p>
+      </div>
+      <div class="review">
+        <p class="stars">★★★★★</p>
+        <blockquote>“We loved the food, people, and chill vibes.”</blockquote>
+        <p>– Jane, Davao</p>
+      </div>
+    </section>
+
+    <section class="add-review">
+      <h3>Add Your Review</h3>
+      <form id="reviewForm">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="text" id="location" placeholder="Your City/Province" required />
+        <textarea id="message" placeholder="Your Review" required></textarea>
+
+        <label for="rating">Rating:</label>
+        <div id="star-rating" class="star-input">
+          <span data-value="1">★</span>
+          <span data-value="2">★</span>
+          <span data-value="3">★</span>
+          <span data-value="4">★</span>
+          <span data-value="5">★</span>
+        </div>
+        <input type="hidden" id="rating" required />
+
+        <input type="file" id="imageUpload" accept="image/*" />
+        <button type="submit" class="btn">Submit Review</button>
+      </form>
+    </section>
+  </main>
+
+<footer>
+  <p>© 2025 Baguio Travel Guide | iLS Project</p>
+  <p>Contact Us | <a href="tel:09755949811">09755949811</a></p>
+</footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
